@@ -7,7 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
     public float speed = 6f;
     public float gravity = -9.81f;
-    public float Jumpheight = 3f;
+    public float Jumpheight = 0.5f;
+ 
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -16,11 +17,7 @@ public class PlayerMovement : MonoBehaviour
     
     Vector3 velocity;
     bool isGrounded;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+ 
 
     // Update is called once per frame
     void Update()
@@ -42,6 +39,6 @@ public class PlayerMovement : MonoBehaviour
         }
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
-
+     
     }
 }
