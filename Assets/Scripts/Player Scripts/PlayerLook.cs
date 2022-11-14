@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
+    [SerializeField]
+    private Transform m_PlayerBody;
   
      public float mouseSensitivity = 100.0f;
      public float clampAngle = 80.0f;
 
     private float rotY = 0.0f; // rotation around the up/y axis
     private float rotX = 0.0f; // rotation around the right/x axis
+
+    private float playerRotation = 0f;
 
     void Start()
     {
@@ -21,16 +25,16 @@ public class PlayerLook : MonoBehaviour
 
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X");
-        float mouseY = -Input.GetAxis("Mouse Y");
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float mouseY = -Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        rotY += mouseX * mouseSensitivity * Time.deltaTime;
-        rotX += mouseY * mouseSensitivity * Time.deltaTime;
+        playerRotation += mouseY;
 
-        rotX = Mathf.Clamp(rotX, -clampAngle, clampAngle); 
+        playerRotation = Mathf.Clamp(playerRotation, -clampAngle, clampAngle);
+
         //rotY = Mathf.Clamp(rotY, -clampAngle, clampAngle); // could be used to limit the player viewpoint
 
-        Quaternion localRotation = Quaternion.Euler(rotX, rotY, 0.0f);
-        transform.rotation = localRotation;
+        transform.localRotation = Quaternion.Euler(playerRotation, 0f, 0f);
+        m_PlayerBody.Rotate(Vector3.up * mouseX);
     }
 }
