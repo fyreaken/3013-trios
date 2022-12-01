@@ -6,7 +6,14 @@ public class Door : Interactable
 {
     [SerializeField]
     private GameObject door;
-    private bool doorOpen;
+    [SerializeField]
+    private AudioSource source;
+    [SerializeField]
+    private AudioClip openClip;
+    [SerializeField]
+    private AudioClip closeClip;
+
+    private bool doorClosed = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +27,15 @@ public class Door : Interactable
     }
     protected override void Interact()
     {
-        doorOpen = !doorOpen;
-        door.GetComponent<Animator>().SetBool("Closed", doorOpen);
+        doorClosed = !doorClosed;
+        if (doorClosed)
+        {
+            source.PlayOneShot(closeClip);
+        }
+        else
+        {
+            source.PlayOneShot(openClip);
+        }
+        door.GetComponent<Animator>().SetBool("Closed", doorClosed);
     }
 }
