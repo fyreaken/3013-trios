@@ -3,7 +3,52 @@ guid: 6a1e0a049e2e5904ab0bfc84576f481a
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlueFloor
+    second: {fileID: 2100000, guid: 4eda9415078180a48872d74913115a2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ceiling
+    second: {fileID: 2100000, guid: d60de7598440ff44590fdea8aff1fac2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GreyCarpet
+    second: {fileID: 2100000, guid: 3c1170085051d3f4ab2c5ffff796bb6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainHallway1
+    second: {fileID: 2100000, guid: 6e217110bf28f604f90c840fd9fca7ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stairs
+    second: {fileID: 2100000, guid: 98ca6c9cd83eb8e4cb98d3a7319535a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StartingRoom
+    second: {fileID: 2100000, guid: be5adcaf4e04c09498130220851ce67c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WaitingRoomCorridoor
+    second: {fileID: 2100000, guid: d29fdffaa8e76874f8dcec80e688fb92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walls
+    second: {fileID: 2100000, guid: 097e32005fa385c4db7aeadb3fb85583, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window
+    second: {fileID: 2100000, guid: daaa5626d0b95654197b9342d6f7f728, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
