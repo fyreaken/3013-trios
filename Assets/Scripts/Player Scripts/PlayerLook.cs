@@ -4,37 +4,22 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
-    [SerializeField]
-    private Transform m_PlayerBody;
-  
-     public float mouseSensitivity = 100.0f;
-     public float clampAngle = 80.0f;
+    public Camera cam;
+    private float xRotation = 0f;
+    public float xSensitivity = 30f;
+    public float ySensitivity = 30f;
 
-    private float rotY = 0.0f; // rotation around the up/y axis
-    private float rotX = 0.0f; // rotation around the right/x axis
-
-    private float playerRotation = 0f;
-
-    void Start()
+   
+    public void ProcessLook(Vector2 input)
     {
         Cursor.lockState = CursorLockMode.Locked;
-        Vector3 rot = transform.localRotation.eulerAngles;
-        rotY = rot.y;
-        rotX = rot.x;
+        float mouseX = input.x;
+        float mouseY = input.y;
+        xRotation -= (mouseY * Time.smoothDeltaTime) * ySensitivity;
+        xRotation = Mathf.Clamp(xRotation, -80f, 80f);
+        cam.transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+        transform.Rotate(Vector3.up * (mouseX * Time.smoothDeltaTime) * xSensitivity);
+        
     }
 
-    void Update()
-    {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = -Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-
-        playerRotation += mouseY;
-
-        playerRotation = Mathf.Clamp(playerRotation, -clampAngle, clampAngle);
-
-        //rotY = Mathf.Clamp(rotY, -clampAngle, clampAngle); // could be used to limit the player viewpoint
-
-        transform.localRotation = Quaternion.Euler(playerRotation, 0f, 0f);
-        m_PlayerBody.Rotate(Vector3.up * mouseX);
-    }
 }
