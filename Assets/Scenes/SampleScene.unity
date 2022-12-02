@@ -583,7 +583,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -846,7 +846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 474790994}
   - component: {fileID: 474790993}
-  - component: {fileID: 474790992}
+  - component: {fileID: 474790995}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -854,26 +854,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &474790992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474790991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &474790993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -904,6 +884,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &474790995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474790991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: 6afaccfb0c001a24b90b7e19c6870039, type: 3}
+  m_PointAction: {fileID: -3202716698500384670, guid: 6afaccfb0c001a24b90b7e19c6870039, type: 3}
+  m_MoveAction: {fileID: -6251041333225486827, guid: 6afaccfb0c001a24b90b7e19c6870039, type: 3}
+  m_SubmitAction: {fileID: -5925086261167573825, guid: 6afaccfb0c001a24b90b7e19c6870039, type: 3}
+  m_CancelAction: {fileID: -926596210465091931, guid: 6afaccfb0c001a24b90b7e19c6870039, type: 3}
+  m_LeftClickAction: {fileID: -164344097160642121, guid: 6afaccfb0c001a24b90b7e19c6870039, type: 3}
+  m_MiddleClickAction: {fileID: -5379664164025425935, guid: 6afaccfb0c001a24b90b7e19c6870039, type: 3}
+  m_RightClickAction: {fileID: -7102813816462978948, guid: 6afaccfb0c001a24b90b7e19c6870039, type: 3}
+  m_ScrollWheelAction: {fileID: -5034243183751247081, guid: 6afaccfb0c001a24b90b7e19c6870039, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 1404576176770714449, guid: 6afaccfb0c001a24b90b7e19c6870039, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: -9044522233009213136, guid: 6afaccfb0c001a24b90b7e19c6870039, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1 &520111288
 GameObject:
   m_ObjectHideFlags: 0
@@ -2401,6 +2411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  Gravity: -9.8
 --- !u!114 &1043536689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3055,7 +3066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1733921373886931665, guid: 191bbaca1b380b444b97511952cec6e3, type: 3}
       propertyPath: promptMessage
-      value: Press "F" to use the door.
+      value: Press F or Left button to use the door.
       objectReference: {fileID: 0}
     - target: {fileID: 2277300995277294443, guid: 191bbaca1b380b444b97511952cec6e3, type: 3}
       propertyPath: m_RootOrder
@@ -4474,7 +4485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1733921373886931665, guid: 191bbaca1b380b444b97511952cec6e3, type: 3}
       propertyPath: promptMessage
-      value: Press "F" to use the door.
+      value: Press F or Left button to use the door.
       objectReference: {fileID: 0}
     - target: {fileID: 2277300995277294443, guid: 191bbaca1b380b444b97511952cec6e3, type: 3}
       propertyPath: m_RootOrder

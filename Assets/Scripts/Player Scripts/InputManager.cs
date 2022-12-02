@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     private PlayerInput playerinput;
-    private PlayerInput.OnFootActions onFoot;
+    public PlayerInput.OnFootActions onFoot;
     private PlayerMotor motor;
     private PlayerLook look;
     // Start is called before the first frame update
@@ -16,6 +16,7 @@ public class InputManager : MonoBehaviour
         onFoot = playerinput.OnFoot;
         motor = GetComponent<PlayerMotor>();
         look = GetComponent<PlayerLook>();
+        onFoot.Crouch.performed += ctx => motor.Crouch();
     }
 
     // Update is called once per frame
