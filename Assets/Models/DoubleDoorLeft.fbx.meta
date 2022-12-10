@@ -4,52 +4,12 @@ ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
-      74: 3325298966220921778
-    second: StairDoorLeft|06_Lift DoorsAction
+      74: -623603649343465320
+    second: LeftOpen
   - first:
-      74: 326183391528517236
-    second: StairDoorLeft|CubeAction
-  - first:
-      74: -8456592414655558611
-    second: StairDoorLeft|OpenCloseCycle
-  - first:
-      74: 2688596969290149027
-    second: StairDoorLeft|PointAction
-  - first:
-      74: -3519060465840053736
-    second: StairDoorLeft|SeeThroughDoor.003Action
-  - first:
-      74: 6576346565956359514
-    second: StairDoorLeft|SeeThroughDoor.003Action.001
-  - first:
-      74: 8297643720543157912
-    second: StairDoorLeft|SeeThroughDoor.003Action.002
-  - first:
-      74: -6306316438576567394
-    second: StairDoorLeft|SpotAction
-  - first:
-      74: 1762685385029878895
-    second: StairDoorLeft|StairDoorRightAction
-  - first:
-      74: -7017471293886743856
-    second: StairDoorLeft|StairwayAction
-  - first:
-      74: -8125141605325871455
-    second: StairDoorLeft|StairwayAction.001
-  - first:
-      74: -9020575990247284905
-    second: StairDoorLeft|SunAction
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: SeeThroughDoor
-    second: {fileID: 2100000, guid: e3de8ea94c5b05e479013b1854411dfe, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Window
-    second: {fileID: 2100000, guid: daaa5626d0b95654197b9342d6f7f728, type: 2}
+      74: 1007095770567677685
+    second: LeftClose
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -77,7 +37,65 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: LeftOpen
+      takeName: Scene
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: LeftClose
+      takeName: Scene
+      internalID: 0
+      firstFrame: 40
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 0
   meshes:
     lODScreenPercentages: []
