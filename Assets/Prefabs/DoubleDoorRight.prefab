@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1500061085734392273
+--- !u!1 &6658561541996825500
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2277300995277294443}
-  - component: {fileID: 2897295214943831246}
-  - component: {fileID: 1139892206626828292}
-  - component: {fileID: 1733921373886931669}
-  - component: {fileID: 1733921373886931674}
-  - component: {fileID: 1733921373886931665}
-  - component: {fileID: 983557401796392858}
+  - component: {fileID: 6281438311902613798}
+  - component: {fileID: 6954680737374346883}
+  - component: {fileID: 5145092101245233737}
+  - component: {fileID: 5811507879882094287}
+  - component: {fileID: 5811507879882094257}
+  - component: {fileID: 5811507879882094256}
+  - component: {fileID: 5811507879882094258}
   m_Layer: 7
-  m_Name: basic_Door
+  m_Name: DoubleDoorRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2277300995277294443
+--- !u!4 &6281438311902613798
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500061085734392273}
-  m_LocalRotation: {x: -0.70708805, y: -0.0051447526, z: -0.005144752, w: 0.7070882}
-  m_LocalPosition: {x: 3.205, y: 1.093, z: 12.178}
+  m_GameObject: {fileID: 6658561541996825500}
+  m_LocalRotation: {x: -0.70709115, y: 0.0046976977, z: 0.0046974034, w: 0.7070912}
+  m_LocalPosition: {x: 7.303, y: 1.466, z: 47.606}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2897295214943831246
+--- !u!33 &6954680737374346883
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500061085734392273}
-  m_Mesh: {fileID: -3742217192580450454, guid: 3be3780c30a0942468b492d19e7b3dac, type: 3}
---- !u!23 &1139892206626828292
+  m_GameObject: {fileID: 6658561541996825500}
+  m_Mesh: {fileID: 7694784615416115012, guid: 52d33c4fb0143c04796c5b16c5557f60, type: 3}
+--- !u!23 &5145092101245233737
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500061085734392273}
+  m_GameObject: {fileID: 6658561541996825500}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -65,7 +65,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4270116805431581265, guid: 3be3780c30a0942468b492d19e7b3dac, type: 3}
+  - {fileID: 8992934318045909824, guid: 52d33c4fb0143c04796c5b16c5557f60, type: 3}
+  - {fileID: 3418973698945312144, guid: 52d33c4fb0143c04796c5b16c5557f60, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87,63 +88,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1733921373886931669
+--- !u!65 &5811507879882094287
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500061085734392273}
+  m_GameObject: {fileID: 6658561541996825500}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.009999999, y: 0.0010000019, z: 0.020000005}
-  m_Center: {x: -0.0049999994, y: -0.000500004, z: 7.314356e-12}
---- !u!95 &1733921373886931674
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500061085734392273}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 26442a39676426c4d8e0bd487cae55d3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1733921373886931665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500061085734392273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f6ed477e9e508e4b90b1e68bb95f9ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Press "F" to open the door.
-  door: {fileID: 1500061085734392273}
-  source: {fileID: 983557401796392858}
-  openClip: {fileID: 8300000, guid: ea6d7f6c883bd1f47831bfb73ad1e375, type: 3}
-  closeClip: {fileID: 8300000, guid: 699c0131e102d784b9ab552c7d682902, type: 3}
---- !u!82 &983557401796392858
+  m_Size: {x: 0.01, y: 0.0014000047, z: 0.02}
+  m_Center: {x: 0.004999999, y: -0.00050000625, z: -0.0036399998}
+--- !u!82 &5811507879882094257
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500061085734392273}
+  m_GameObject: {fileID: 6658561541996825500}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -233,3 +197,40 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &5811507879882094256
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658561541996825500}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d03cded6827a372449b820f56e4a790d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5811507879882094258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658561541996825500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6ed477e9e508e4b90b1e68bb95f9ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Press "F" or Left button to use door.
+  door: {fileID: 6658561541996825500}
+  source: {fileID: 5811507879882094257}
+  openClip: {fileID: 8300000, guid: ea6d7f6c883bd1f47831bfb73ad1e375, type: 3}
+  closeClip: {fileID: 8300000, guid: 699c0131e102d784b9ab552c7d682902, type: 3}
