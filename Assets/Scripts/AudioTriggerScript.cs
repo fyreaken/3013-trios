@@ -10,8 +10,18 @@ public class AudioTriggerScript : MonoBehaviour
     {
         if (other.tag == "Player" && !audioSource.isPlaying && !alreadyPlayed)
         {
-            audioSource.Play();
-            alreadyPlayed = true;
+            GameEvents.instance.soundEffectTrigger();
         }
+    }
+
+    private void Start()
+    {
+        GameEvents.instance.onSoundEffectTrigger += EnterSoundTrigger;
+    }
+
+    private void EnterSoundTrigger()
+    {
+        audioSource.Play();
+        alreadyPlayed = true;
     }
 }
