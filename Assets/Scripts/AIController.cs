@@ -2,8 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+
 public class AIController : MonoBehaviour
 {
+    [SerializeField] GameObject CrosshairUI;
+    [SerializeField] GameObject PauseUI;
+    [SerializeField] GameObject DeathUI;
+
     public NavMeshAgent navMeshAgent;
     public float startWaitTime = 4;
     public float timeToRotate = 2;
@@ -64,6 +69,19 @@ public class AIController : MonoBehaviour
         }
     }
  
+    void OnTriggerEnter(Collider col){ //when player collides with monster object, pause game and show Death Menu UI
+        if (col.gameObject.name == "Player"){ // "You have died!"
+            m_CaughtPlayer = true;
+            if (m_CaughtPlayer) {
+                Time.timeScale = 0;
+                AudioListener.pause = true;
+                CrosshairUI.SetActive(false);
+                PauseUI.SetActive(false);
+                DeathUI.SetActive(true);
+            }
+        }
+    }
+
     private void Chasing()
     {
         m_PlayerNear = false;
@@ -130,12 +148,7 @@ public class AIController : MonoBehaviour
             }
         }
     }
- 
-    private void OnAnimatorMove()
-    {
- 
-    }
- 
+
     public void NextPoint()
     {
         if(m_CurrentWaypointIndex >= 6)
