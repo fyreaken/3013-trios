@@ -12,7 +12,6 @@ public class PlayerLook : MonoBehaviour
    
     public void ProcessLook(Vector2 input)
     {
-        Cursor.lockState = CursorLockMode.Locked;
         float mouseX = input.x;
         float mouseY = input.y;
         xRotation -= (mouseY * Time.smoothDeltaTime) * ySensitivity;

@@ -22,6 +22,10 @@ public class AIController : MonoBehaviour
     public float meshResolution = 1.0f;
     public int edgeIterations = 4;
     public float edgeDistance = 0.5f;
+
+    public Animator m_animator;
+
+    public AudioSource m_audioSource;
  
  
     public Transform[] waypoints;
@@ -46,7 +50,9 @@ public class AIController : MonoBehaviour
         m_PlayerNear = false;
         m_WaitTime = startWaitTime;
         m_TimeToRotate = timeToRotate;
- 
+        m_animator = GetComponent<Animator>();
+        m_audioSource = GetComponent<AudioSource>();
+
         m_CurrentWaypointIndex = 0;
         navMeshAgent = GetComponent<NavMeshAgent>();
  
@@ -78,6 +84,7 @@ public class AIController : MonoBehaviour
                 CrosshairUI.SetActive(false);
                 PauseUI.SetActive(false);
                 DeathUI.SetActive(true);
+                Cursor.lockState = CursorLockMode.Confined;
             }
         }
     }
@@ -86,7 +93,9 @@ public class AIController : MonoBehaviour
     {
         m_PlayerNear = false;
         playerLastPosition = Vector3.zero;
- 
+
+        m_animator.speed = 2f;
+
         if (!m_CaughtPlayer)
         {
             Move(speedRun);
@@ -114,6 +123,8 @@ public class AIController : MonoBehaviour
  
     private void Patroling()
     {
+        m_animator.speed = 1f;
+
         if (m_PlayerNear)
         {
             if (m_TimeToRotate <= 0)
@@ -166,12 +177,19 @@ public class AIController : MonoBehaviour
     {
         navMeshAgent.isStopped = true;
         navMeshAgent.speed = 0;
+        m_animator.SetBool("walking", false);
+        m_audioSource.Stop();
     }
  
     void Move(float speed)
     {
         navMeshAgent.isStopped = false;
         navMeshAgent.speed = speed;
+        m_animator.SetBool("walking", true);
+        if (!m_audioSource.isPlaying)
+        {
+            m_audioSource.Play();
+        }
     }
  
     void CaughtPlayer()

@@ -12,21 +12,38 @@ public class Door : Interactable
     private AudioClip openClip;
     [SerializeField]
     private AudioClip closeClip;
+    [SerializeField]
+    private AudioClip unlockClip;
 
     private bool doorClosed = true;
-    // Start is called before the first frame update
-    void Start()
-    {
 
+    public bool Locked = false;
+
+    public Inventory playerInventory;
+
+    void OnEnable()
+    {
+        if (Locked)
+        {
+            promptMessage = "You need a key to unlock this.";
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     protected override void Interact()
     {
+        if (Locked)
+        {
+            if (playerInventory.InventoryItems.Contains("key"))
+            {
+                Locked = false;
+                promptMessage = "[F]";
+                source.PlayOneShot(unlockClip);
+            }
+            else
+            {
+                return;
+            }
+        }
         doorClosed = !doorClosed;
         if (doorClosed)
         {

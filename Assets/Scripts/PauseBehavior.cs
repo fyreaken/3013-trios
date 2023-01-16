@@ -22,6 +22,7 @@ public class PauseBehavior : MonoBehaviour
     }
 
     private void OnEnable(){
+        Cursor.lockState = CursorLockMode.Locked;
         menu = playerControls.Menu.Escape;
         ui = playerControls.UI;
         onfoot = playerControls.OnFoot;
@@ -56,6 +57,7 @@ public class PauseBehavior : MonoBehaviour
             AudioListener.pause = true;
             CrosshairUI.SetActive(false);
             PauseUI.SetActive(true);
+            Cursor.lockState = CursorLockMode.Confined;
         }
     }
 
@@ -66,6 +68,7 @@ public class PauseBehavior : MonoBehaviour
             CrosshairUI.SetActive(true);
             PauseUI.SetActive(false);
             isGamePaused = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
